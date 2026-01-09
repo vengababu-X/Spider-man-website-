@@ -18,7 +18,6 @@ html, body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 /* IMAGES */
@@ -30,26 +29,35 @@ html, body {
   object-fit: cover;
 }
 
-/* FRONT IMAGE MASK */
+/* FRONT IMAGE WITH MASK */
 .front {
   --x: 50%;
   --y: 50%;
-  clip-path: circle(0px at var(--x) var(--y));
-  transition: clip-path 0.05s linear;
+  -webkit-mask-image: radial-gradient(
+    circle at var(--x) var(--y),
+    transparent 0%,
+    black 35%
+  );
+  mask-image: radial-gradient(
+    circle at var(--x) var(--y),
+    transparent 0%,
+    black 35%
+  );
+  filter: url(#liquid);
 }
 
 /* TEXT */
 .text {
   position: absolute;
-  z-index: 5;
   inset: 0;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
-  text-align: center;
   pointer-events: none;
+  color: #fff;
+  text-align: center;
 }
 
 .text h1 {
