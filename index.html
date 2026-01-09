@@ -8,11 +8,30 @@
 </head>
 <body>
 
-  <div id="container">
-    <!-- BACK IMAGE (SPIDER-MAN) -->
-    <img src="images (7).jpeg" class="image back" />
+  <!-- SVG MASK -->
+  <svg width="0" height="0">
+    <filter id="liquid">
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency="0.01"
+        numOctaves="2"
+        seed="2"
+        result="noise"
+      />
+      <feDisplacementMap
+        in="SourceGraphic"
+        in2="noise"
+        scale="60"
+      />
+    </filter>
+  </svg>
 
-    <!-- FRONT IMAGE (YOU) -->
+  <div id="container">
+
+    <!-- BACK IMAGE -->
+    <img src="image-7.jpeg" class="image back" />
+
+    <!-- FRONT IMAGE -->
     <img src="IMG-20250824-WA0024.jpg" class="image front" />
 
     <!-- TEXT -->
@@ -20,6 +39,7 @@
       <h1>DUALITY</h1>
       <p>Move to reveal the other side</p>
     </div>
+
   </div>
 
   <script src="script.js"></script>
