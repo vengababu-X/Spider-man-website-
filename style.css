@@ -59,3 +59,30 @@ html, body {
   margin-top: 12px;
   color: #ccc;
 }
+
+/* HIDE DEFAULT CURSOR */
+body {
+  cursor: none;
+}
+
+/* CUSTOM CURSOR */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 180, 255, 0.9) 0%,
+    rgba(0, 120, 255, 0.6) 40%,
+    rgba(0, 60, 255, 0.2) 60%,
+    transparent 70%
+  );
+  filter: blur(4px);
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
