@@ -1,0 +1,93 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* HERO SECTION */
+.hero {
+  background: url("hero.jpg") center / cover no-repeat;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* STORY SECTION */
+.story {
+  background-color: #000;
+  max-width: 800px;
+}
+
+.story h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.story p {
+  color: #bbb;
+  margin-bottom: 15px;
+}
+
+/* PROFILE SECTION */
+.profile {
+  background-color: #0a0a0a;
+}
+
+.profile img {
+  width: 200px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.profile h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  color: #aaa;
+  max-width: 500px;
+}
