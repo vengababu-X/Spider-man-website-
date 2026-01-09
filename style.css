@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -13,14 +12,12 @@ html, body {
   font-family: system-ui, sans-serif;
 }
 
-/* CONTAINER */
 #container {
   position: relative;
   width: 100vw;
   height: 100vh;
 }
 
-/* IMAGES */
 .image {
   position: absolute;
   inset: 0;
@@ -29,34 +26,25 @@ html, body {
   object-fit: cover;
 }
 
-/* FRONT IMAGE WITH MASK */
+/* FRONT IMAGE MASK */
 .front {
   --x: 50%;
   --y: 50%;
-  -webkit-mask-image: radial-gradient(
-    circle at var(--x) var(--y),
-    transparent 0%,
-    black 35%
-  );
-  mask-image: radial-gradient(
-    circle at var(--x) var(--y),
-    transparent 0%,
-    black 35%
-  );
-  filter: url(#liquid);
+  clip-path: ellipse(120px 90px at var(--x) var(--y));
+  transition: clip-path 0.08s linear;
 }
 
 /* TEXT */
 .text {
   position: absolute;
   inset: 0;
-  z-index: 10;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  color: #fff;
+  color: white;
   text-align: center;
 }
 
