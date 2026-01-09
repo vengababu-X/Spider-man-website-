@@ -1,18 +1,17 @@
-const frontImage = document.querySelector(".front");
+const front = document.querySelector(".front");
 
-function reveal(x, y) {
-  frontImage.style.setProperty("--x", `${x}px`);
-  frontImage.style.setProperty("--y", `${y}px`);
-  frontImage.style.clipPath = `circle(120px at ${x}px ${y}px)`;
+function move(x, y) {
+  front.style.setProperty("--x", `${x}px`);
+  front.style.setProperty("--y", `${y}px`);
 }
 
 /* MOUSE */
 document.addEventListener("mousemove", (e) => {
-  reveal(e.clientX, e.clientY);
+  move(e.clientX, e.clientY);
 });
 
-/* TOUCH (MOBILE) */
+/* TOUCH */
 document.addEventListener("touchmove", (e) => {
-  const touch = e.touches[0];
-  reveal(touch.clientX, touch.clientY);
+  const t = e.touches[0];
+  move(t.clientX, t.clientY);
 });
