@@ -5,68 +5,59 @@
   box-sizing: border-box;
 }
 
-/* GLOBAL */
 html, body {
   width: 100%;
   height: 100%;
-}
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
   background: #000;
-  color: #fff;
+  font-family: system-ui, sans-serif;
 }
 
-/* SLIDE */
-.slide {
-  height: 100vh;
-  width: 100%;
+/* CONTAINER */
+#container {
   position: relative;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* OVERLAY */
-.overlay {
+/* IMAGES */
+.image {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* CONTENT */
-.content {
-  position: relative;
-  z-index: 1;
-  max-width: 720px;
-  padding: 0 20px;
+/* FRONT IMAGE MASK */
+.front {
+  --x: 50%;
+  --y: 50%;
+  clip-path: circle(0px at var(--x) var(--y));
+  transition: clip-path 0.05s linear;
 }
 
-.content h1 {
+/* TEXT */
+.text {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  pointer-events: none;
+}
+
+.text h1 {
   font-size: 3rem;
   letter-spacing: 6px;
 }
 
-.content h2 {
-  font-size: 2.5rem;
-  letter-spacing: 5px;
-}
-
-.content p {
-  margin-top: 14px;
-  font-size: 1rem;
-  color: #ddd;
-}
-
-/* SLIDE 1 — YOUR IMAGE */
-.slide-you {
-  background-image: url("IMG-20250824-WA0024.jpg");
-}
-
-/* SLIDE 2 — SPIDER-MAN IMAGE */
-.slide-spiderman {
-  background-image: url("images (7).jpeg");
+.text p {
+  margin-top: 12px;
+  color: #ccc;
 }
