@@ -7,34 +7,33 @@
 
 /* GLOBAL */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #000;
+  font-family: system-ui, sans-serif;
+  background: #000;
   color: #fff;
-  line-height: 1.6;
 }
 
-/* SECTIONS */
+/* COMMON SECTION STYLE */
 .section {
   min-height: 100vh;
-  padding: 40px 20px;
+  width: 100%;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-/* HERO SECTION */
-.hero {
-  background: url("hero.jpg") center / cover no-repeat;
-  position: relative;
-}
-
-.hero::after {
-  content: "";
+/* OVERLAY */
+.overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0,0,0,0.45);
+}
+
+/* HERO SECTION = YOUR IMAGE */
+/* ⬇⬇⬇ REPLACE THE FILENAME WITH YOUR IMAGE NAME ⬇⬇⬇ */
+.hero {
+  background: url("IMG-20250824-WA0024.jpg") center / cover no-repeat;
 }
 
 .hero-content {
@@ -43,51 +42,33 @@ body {
   max-width: 700px;
 }
 
-.hero h1 {
+.hero-content h1 {
   font-size: 3rem;
   letter-spacing: 6px;
-  margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 1.1rem;
+.hero-content p {
+  margin-top: 12px;
   color: #ddd;
 }
 
-/* STORY SECTION */
-.story {
-  background-color: #000;
-  max-width: 800px;
+/* SECOND SECTION = SPIDER-MAN IMAGE */
+/* ⬇⬇⬇ REPLACE THE FILENAME WITH YOUR SPIDER-MAN IMAGE NAME ⬇⬇⬇ */
+.spiderman {
+  background: url("images (7).jpeg") center / cover no-repeat;
 }
 
-.story h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.spiderman-content {
+  position: relative;
+  z-index: 1;
 }
 
-.story p {
+.spiderman-content h2 {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+}
+
+.spiderman-content p {
+  margin-top: 10px;
   color: #bbb;
-  margin-bottom: 15px;
-}
-
-/* PROFILE SECTION */
-.profile {
-  background-color: #0a0a0a;
-}
-
-.profile img {
-  width: 200px;
-  border-radius: 14px;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-}
-
-.profile h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.profile p {
-  color: #aaa;
-  max-width: 500px;
 }
