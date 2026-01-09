@@ -12,63 +12,59 @@ body {
   color: #fff;
 }
 
-/* COMMON SECTION STYLE */
-.section {
-  min-height: 100vh;
+/* SLIDE (FULL SCREEN) */
+.slide {
+  height: 100vh;
   width: 100%;
   position: relative;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-/* OVERLAY */
+/* DARK OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
 }
 
-/* HERO SECTION = YOUR IMAGE */
-/* ⬇⬇⬇ REPLACE THE FILENAME WITH YOUR IMAGE NAME ⬇⬇⬇ */
-.hero {
-  background: url("IMG-20250824-WA0024.jpg") center / cover no-repeat;
-}
-
-.hero-content {
+/* TEXT BLOCK */
+.text {
   position: relative;
   z-index: 1;
-  max-width: 700px;
+  max-width: 720px;
+  padding: 0 20px;
 }
 
-.hero-content h1 {
+.text h1,
+.text h2 {
+  letter-spacing: 5px;
+}
+
+.text h1 {
   font-size: 3rem;
-  letter-spacing: 6px;
 }
 
-.hero-content p {
-  margin-top: 12px;
-  color: #ddd;
-}
-
-/* SECOND SECTION = SPIDER-MAN IMAGE */
-/* ⬇⬇⬇ REPLACE THE FILENAME WITH YOUR SPIDER-MAN IMAGE NAME ⬇⬇⬇ */
-.spiderman {
-  background: url("images (7).jpeg") center / cover no-repeat;
-}
-
-.spiderman-content {
-  position: relative;
-  z-index: 1;
-}
-
-.spiderman-content h2 {
+.text h2 {
   font-size: 2.5rem;
-  letter-spacing: 4px;
 }
 
-.spiderman-content p {
-  margin-top: 10px;
-  color: #bbb;
+.text p {
+  margin-top: 14px;
+  color: #ddd;
+  font-size: 1rem;
+}
+
+/* SLIDE 1 — YOUR IMAGE (HERO) */
+.hero {
+  background-image: url("IMG-20250824-WA0024.jpg");
+}
+
+/* SLIDE 2 — SPIDER-MAN IMAGE */
+.spiderman {
+  background-image: url("images (7).jpeg");
 }
